@@ -1,8 +1,15 @@
 <div>
+  <h1>
+    <ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.content %></li>
+  <% end %>
+</ul>
+  </h1>
 
-<h1> <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<h2>
 <%= link_to 'Back', restaurants_path %> |
 <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
-New Review (2)</h1>
+</h2>
 
 </div>
